@@ -1,7 +1,6 @@
 import pandas as pd
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import SQLAlchemyError
-import numpy as np
 
 class DataSourceConfig:
     """Configurazione sorgenti dati e destinazione output"""
@@ -58,8 +57,7 @@ class DataPipeline:
 
     def clean_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """Operazioni varie di pulizia dati"""
-        # INSERIRE PER ESERCIZIO  
-        df.replace("?", np.nan, inplace=True)       
+        # INSERIRE PER ESERCIZIO         
         return df 
     
     def run_pipeline(self) -> pd.DataFrame:
